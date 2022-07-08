@@ -1,7 +1,13 @@
-import { v4 as uuidV4 } from "uuid";
+import { v4 as uuidv4 } from "uuid"
 
-class User {
-  // Complete aqui
+export class User {
+  constructor(public id: string = uuidv4(), public admin: boolean = false) {
+    this.created_at = new Date()
+    this.updated_at = this.created_at
+  }
+
+  email: string
+  name: string
+  created_at: Date
+  updated_at: Date
 }
-
-export { User };
